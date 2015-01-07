@@ -2,5 +2,7 @@
 in a binary  tree   Avoid storing additional nodes in a data structure    NOTE: This is not 
 necessarily a binary search tree  */
 public class CommenAncestor{
-  
+    public static TreeNode findCommenAncestor(TreeNode noodeA, TreeNode noodB){
+         
+    }
 }
