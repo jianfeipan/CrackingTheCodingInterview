@@ -7,6 +7,6 @@ public class SubBits{
   public static int setSubBits(int N, int M, int i, int j){
     int tmp=-1;//all one or int tmp=~0;
     tmp<<<2;
-    return N&tmp|
+    return N&tmp|M<<j;
   }
 }
