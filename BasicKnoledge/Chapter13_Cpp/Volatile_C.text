@@ -7,3 +7,22 @@ volatile int * x;
 int volatile * x;
 /*Declaring a volatile pointer variable for a non-volatile memory (only memory contained is volatile):*/
 int * volatile x;
+/*Declaring a volatile variable pointer for a volatile memory (both pointer address and memory contained are volatile):*/
+volatile int * volatile x;
+int volatile * volatile x;
+
+int opt=1;
+void Fn(void){
+  start:
+    if(opt==1) goto start;
+    else break;
+}
+/*At first glance, our code appears to loop infinitely.The compiler will try to optimize it to:*/
+void Fn(void){
+  start:
+    int opt=1;
+    if(true)
+      goto start;
+}
+
+/*This becomes an infinite loop. However, an external program might write ‘0’ to the location of variable opt. Volatile variables are also useful when multi-threaded programs have global variables and any thread can modify these shared variables. Of course, we don’t want optimization on them.*/
