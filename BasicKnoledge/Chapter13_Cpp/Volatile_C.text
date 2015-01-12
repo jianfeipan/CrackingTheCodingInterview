@@ -1,0 +1,9 @@
+/*Volatile informs the compiler that the value of the variable can change from the outside, without any update done by the code.*/
+/*Declaring a simple volatile variable:*/
+volatile int x;
+int volatile x;
+/*Declaring a pointer variable for a volatile memory (only the pointer address is volatile):*/
+volatile int * x;
+int volatile * x;
+/*Declaring a volatile pointer variable for a non-volatile memory (only memory contained is volatile):*/
+int * volatile x;
