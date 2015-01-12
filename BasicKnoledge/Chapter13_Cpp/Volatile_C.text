@@ -25,4 +25,4 @@ void Fn(void){
       goto start;
 }
 
-/*This becomes an infinite loop. However, an external program might write ‘0’ to the location of variable opt. Volatile variables are also useful when multi-threaded programs have global variables and any thread can modify these shared variables. Of course, we don’t want optimization on them.*/
+/*This becomes an infinite loop. However, an external program might write ‘0’ to the location of variable opt. Volatile variables are also useful when multi-threaded programs have global variables and any thread can modify these shared variables. Of course, we don’t want optimization on them. */
