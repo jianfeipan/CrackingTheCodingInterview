@@ -1,3 +1,4 @@
+/*Let us explain through an example. In C++, when you have a class with an overloaded method, and you then extend and override that method, you must override all of the overloaded methods. for example: */
 class FirstClass{
   public:
     virtual void MethodA(int);
@@ -9,7 +10,8 @@ void FirstClass::MethodA(int i){
 void FirstClass::MethodA(int i, int i){
   std::cout <<"TWO!!\n";
 }
-
+/*This is a simple class with two methods (or one overloaded method). If you want to override the one-parameter version, you can do the following:
+*/
 class SecondClass{
   public: 
     void MethodA(int);
