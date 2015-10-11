@@ -2,7 +2,7 @@
 to print all paths which  sum up to that value    Note that it can be any path in the tree 
 - it does not have to start at the root  */
 public class FindValuePath{
-  public static void printSumPath(TreeNode root, int sum, ArrayList<Integer> buffer, int level){
+  public static void printSumPath(TreeNode root, int sum, int level){
     if(root==null) return;
     int tmp=sum;
     buffer.add(root.data);
@@ -10,10 +10,8 @@ public class FindValuePath{
       tmp-=buffer.get(i);
       if(tmp==0) print(buffer,i,level);
     }
-    ArrayList<Interger> c1=(ArrayList<Interger>)buffer.clone();
-    ArrayList<Interger> c2=(ArrayList<Interger>)buffer.clone();
-    findSum(head.left,sum,level+1);
-    findSum(head.right,sum,level+1);
+    printSumPath(head.left,sum,level+1);
+    printSumPath(head.right,sum,level+1);
   }
   
   public static void print(ArrayList<Integer> buffer, int i, int level){
